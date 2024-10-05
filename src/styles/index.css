@@ -1,24 +1,108 @@
 body {
-  background-color: #2e3436;
+  background-color: #414b4e;
   color: #d3d7cf;
   font-family: 'Ubuntu', sans-serif;
 }
 
-header {
-  background-color: #4e9a06;
-  padding: 10px;
-  text-align: center;
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px; 
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 20px;
+  background-color: #2e3436;
+  border-radius: 8px;
+}
+
+label {
+  font-weight: bold;
   color: white;
 }
 
-button {
-  background-color: #4e9a06;
-  color: white;
-  border: none;
+input {
   padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+header {
+  background-color: #74b933;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: start;
+  color: white;
+}
+header ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+  display: flex; 
+}
+
+header ul li {
+  margin-right: 15px; 
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+header ul li a:hover {
+  color: #73d216; 
+}
+h2 {
+  font-size: 2rem; 
+  margin-bottom: 20px;
+  color: #73d216; 
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #73d216;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #d3d7cf;
+}
+
+ul {
+  list-style-type: none; /* Remove os pontos da lista */
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+ul li span {
+  flex: 1;
+  color: #d3d7cf;
+}
+
+ul li span:first-child {
+  font-weight: bold;
+}
+
+
+button {
+  background-color: #4e9a06; 
+  grid-column: span 2;
+  color: rgb(233, 217, 217);
+  border: none;
+  padding: 10px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 button:hover {
+ 
   background-color: #73d216;
 }

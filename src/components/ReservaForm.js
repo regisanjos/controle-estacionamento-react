@@ -25,11 +25,21 @@ const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
     alert('Cadastro realisado com sucesso');
-
+    
+    setFormData({
+        placa: '',
+        nome: '',
+        apartamento: '',
+        bloco: '',
+        modelo: '',
+        cor: '',
+        vaga: ''
+      });
+    
 };
 return (
     <form onSubmit={handleSubmit}>
-        <label>Placa Do veiculo</label>
+        <label>Placa do veiculo</label>
         <input name="placa" value={formData.placa} onChange={handleChange}required/>
 
         
