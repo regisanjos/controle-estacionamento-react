@@ -9,12 +9,12 @@ body {
 form {
   display: grid;
   grid-template-columns: 1fr 1fr; 
-  gap: 10px; 
+  gap: 10px;
   max-width: 800px; 
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 20px;
-  background-color: #2e3436; 
-  border-radius: 8px; 
+  background-color: #2e3436;
+  border-radius: 8px;
 }
 
 label {
@@ -25,7 +25,7 @@ input {
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc; 
-  width: 100%; 
+  width: 100%;
 }
 
 
@@ -38,18 +38,18 @@ header {
 }
 
 header ul {
-  list-style-type: none; 
+  list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex; 
 }
 
 header ul li {
-  margin-right: 15px; 
+  margin-right: 15px;
 }
 
 header ul li a {
-  text-decoration: none; 
+  text-decoration: none;
   color: white;
 }
 
@@ -58,16 +58,16 @@ header ul li a:hover {
 }
 
 
-h2 {
+h2, h3 {
   font-size: 2rem;
-  margin-bottom: 20px;
   color: #73d216;
+  margin-bottom: 20px;
 }
 
 h3 {
   font-size: 1.5rem;
+  color: #73d216;
   margin-bottom: 15px;
-  color: #d3d7cf;
 }
 
 
@@ -88,36 +88,58 @@ ul li span {
 }
 
 ul li span:first-child {
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 
 button {
-  background-color: #4e9a06; 
-  grid-column: span 2; 
-  color: rgb(233, 217, 217); 
+  background-color: #4e9a06;
+  grid-column: span 2;
+  color: rgb(233, 217, 217);
   border: none;
   padding: 10px;
   cursor: pointer;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 button:hover {
-  background-color: #73d216; 
+  background-color: #73d216;
 }
 
 
 .button-remove {
-  background-color: #e74c3c; 
+  background-color: #e74c3c;
   color: white;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .button-remove:hover {
-  background-color: #c0392b; 
+  background-color: #c0392b;
+}
+
+
+.vaga-disponivel {
+  background-color: #2e3436;
+  color: #d3d7cf;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #4e9a06;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vaga-disponivel span {
+  flex: 1;
+}
+
+.vaga-disponivel:hover {
+  background-color: #4e9a06;
+  color: white;
+  cursor: pointer;
 }
 
 
@@ -128,6 +150,6 @@ button:hover {
 
   ul li {
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import ListaVaga from '../components/ListaVaga';
+import ListaVaga from '../components/ListaVagas';
 
 const ListaVagaPage = () => (
   <div>

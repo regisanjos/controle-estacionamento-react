@@ -7,6 +7,7 @@ const Header = () => (
       <ul>
         <li><Link to="/">Cadastro de Vaga</Link></li>
         <li><Link to="/list">Listagem de Vagas</Link></li>
+        <li><Link to="/vagas-disponiveis">Vagas Disponiveis</Link></li>
       </ul>
     </nav>
   </header>
