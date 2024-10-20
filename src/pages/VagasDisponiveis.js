@@ -1,25 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const VagasDisponiveis = () => {
+ 
+  const [vagasDisponiveis, setVagasDisponiveis] = useState(() => {
+    return JSON.parse(localStorage.getItem('vagasDisponiveis')) || [];
+  });
 
-  const vagasDisponiveis = [
-    { vaga: '1A', bloco: 'A' },
-    { vaga: '2B', bloco: 'B' },
-    { vaga: '3C', bloco: 'C' },
-    { vaga: '4D', bloco: 'D' },
-    { vaga: '5E', bloco: 'E' }
-  ];
+  const vagasOrdenadas = vagasDisponiveis.sort((a, b) => a.vaga.localeCompare(b.vaga));
 
   return (
     <div>
       <h3>Vagas Disponíveis</h3>
       <ul>
-        {vagasDisponiveis.map((vaga, index) => (
-          <li key={index} className='vaga-disponivel'>
-            <span>Vaga: {vaga.vaga}</span> 
-            <span>Bloco: {vaga.bloco}</span> 
-          </li>
-        ))}
+        {vagasDisponiveis.length > 0 ? (
+          vagasDisponiveis.map((vaga, index) => (
+            <li key={index} className="vaga-disponivel">
+              <span>Vaga: {vaga.vaga}</span>
+              <span>Bloco: {vaga.bloco}</span>
+            </li>
+          ))
+        ) : (
+          <li>Nenhuma vaga disponível no momento.</li>
+        )}
       </ul>
     </div>
   );
