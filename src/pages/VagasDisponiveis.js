@@ -1,12 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
 const VagasDisponiveis = () => {
- 
-  const [vagasDisponiveis, setVagasDisponiveis] = useState(() => {
-    return JSON.parse(localStorage.getItem('vagasDisponiveis')) || [];
-  });
+  const [vagasDisponiveis, setVagasDisponiveis] = useState([]);
 
-  const vagasOrdenadas = vagasDisponiveis.sort((a, b) => a.vaga.localeCompare(b.vaga));
+  useEffect(() => {
+    const vagasIniciais = [
+      { vaga: '1A', bloco: 'A' },
+      { vaga: '2B', bloco: 'B' },
+      { vaga: '3C', bloco: 'C' },
+      { vaga: '4D', bloco: 'D' },
+      { vaga: '5E', bloco: 'E' }
+    ];
+
+    const vagasSalvas = JSON.parse(localStorage.getItem('vagasDisponiveis'));
+    
+    if (!vagasSalvas) {
+      localStorage.setItem('vagasDisponiveis', JSON.stringify(vagasIniciais));
+      setVagasDisponiveis(vagasIniciais);
+    } else {
+      setVagasDisponiveis(vagasSalvas);
+    }
+  }, []);
 
   return (
     <div>

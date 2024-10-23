@@ -14,7 +14,6 @@ const CadastroVaga = () => {
   const [vagasDisponiveis, setVagasDisponiveis] = useState(() => {
     return JSON.parse(localStorage.getItem('vagasDisponiveis')) || [
       { vaga: '1A', bloco: 'A' },
-      { vaga: '2A', bloco: 'A' },
       { vaga: '2B', bloco: 'B' },
       { vaga: '3C', bloco: 'C' },
       { vaga: '4D', bloco: 'D' },
